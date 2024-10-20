@@ -5,21 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>متجرنا الإلكتروني - سلطنة عمان</title>
     <style>
-        /* General styles */
+        /* General reset and body styling */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             direction: rtl;
-            text-align: center;
-            background-color: #f5f5f5;
-            margin: 0;
-            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
         }
 
-        /* Header styles */
+        /* Header and Navigation styling */
         header {
-            background-color: #222;
-            color: white;
+            background: linear-gradient(90deg, #4CAF50, #2e7d32);
             padding: 20px;
+            color: white;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -27,124 +32,164 @@
         }
 
         header img {
-            width: 80px;
+            width: 70px;
             height: auto;
-            margin-left: 20px;
         }
 
         header h1 {
-            font-size: 2.5em;
-            margin: 0;
-            flex-grow: 1;
-        }
-
-        nav {
-            margin-top: 10px;
+            font-size: 2.2rem;
+            margin-left: 20px;
         }
 
         nav a {
-            margin: 0 15px;
             color: white;
-            text-decoration: none;
+            margin-left: 15px;
             font-weight: bold;
-            padding: 10px;
-            transition: background-color 0.3s;
+            text-decoration: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: background 0.3s ease;
         }
 
         nav a:hover {
-            background-color: #4CAF50;
-            border-radius: 5px;
+            background-color: rgba(255, 255, 255, 0.3);
         }
 
-        /* Section styles */
-        section {
-            margin: 40px auto;
-            padding: 20px;
-            max-width: 1200px;
-            background-color: white;
-            border-radius: 15px;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        /* Hero section */
+        #home {
+            background-image: url('https://via.placeholder.com/1200x400.png?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7+%D8%A8%D9%83%D9%85+%D9%81%D9%8A+%D9%85%D8%AA%D8%AC%D8%B1%D9%86%D8%A7');
+            background-size: cover;
+            background-position: center;
+            padding: 80px 20px;
+            color: white;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+            text-align: center;
         }
 
-        section h2 {
-            font-size: 2.2em;
-            color: #333;
+        #home h2 {
+            font-size: 3rem;
             margin-bottom: 20px;
         }
 
-        section p {
-            font-size: 1.2em;
-            color: #666;
-            line-height: 1.6;
+        #home p {
+            font-size: 1.5rem;
+            max-width: 800px;
+            margin: 0 auto;
         }
 
-        /* Products section styling */
+        /* Product section styling */
         #products {
+            padding: 60px 20px;
+            background-color: white;
+        }
+
+        #products h2 {
+            font-size: 2.5rem;
+            color: #333;
+            margin-bottom: 40px;
+        }
+
+        .product-grid {
             display: flex;
-            justify-content: space-around;
             flex-wrap: wrap;
+            justify-content: space-around;
         }
 
-        .product {
+        .product-card {
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            width: 300px;
             margin: 20px;
-            width: 250px;
-            text-align: center;
+            transition: transform 0.3s;
         }
 
-        .product img {
+        .product-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .product-card img {
             width: 100%;
             height: 200px;
             object-fit: cover;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         }
 
-        .product p {
-            font-size: 1.1em;
-            margin-top: 10px;
+        .product-card p {
+            padding: 20px;
+            font-size: 1.2rem;
             color: #555;
         }
 
-        .product a {
+        .product-card a {
             display: inline-block;
-            margin-top: 10px;
-            padding: 10px 15px;
+            padding: 10px 20px;
             background-color: #4CAF50;
             color: white;
-            border-radius: 5px;
             text-decoration: none;
+            font-weight: bold;
+            margin: 10px 0 20px;
+            border-radius: 5px;
+            transition: background 0.3s ease;
         }
 
-        .product a:hover {
-            background-color: #333;
+        .product-card a:hover {
+            background-color: #2e7d32;
         }
 
         /* Contact section */
+        #contact {
+            padding: 60px 20px;
+            background: linear-gradient(90deg, #2e7d32, #4CAF50);
+            color: white;
+            text-align: center;
+        }
+
+        #contact h2 {
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+        }
+
         #contact p {
-            font-size: 1.3em;
-            margin: 10px 0;
-            color: #333;
+            font-size: 1.4rem;
         }
 
         #contact a {
-            color: #4CAF50;
+            color: #FFD700;
             text-decoration: none;
+            font-weight: bold;
         }
 
-        /* Footer */
+        /* Footer styling */
         footer {
             background-color: #222;
             color: white;
-            padding: 15px 0;
+            padding: 20px;
             text-align: center;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-            box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
         }
 
         footer p {
             margin: 0;
+            font-size: 1.1rem;
+        }
+
+        /* Responsive styling */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.8rem;
+            }
+
+            #home h2 {
+                font-size: 2.2rem;
+            }
+
+            #home p {
+                font-size: 1.2rem;
+            }
+
+            #products h2, #contact h2 {
+                font-size: 2rem;
+            }
         }
     </style>
 </head>
@@ -152,7 +197,7 @@
 
     <!-- Header and Navigation -->
     <header>
-        <img src="https://via.placeholder.com/80" alt="Logo">
+        <img src="https://via.placeholder.com/70" alt="Logo">
         <h1>متجرنا الإلكتروني</h1>
         <nav>
             <a href="#home">الصفحة الرئيسية</a>
@@ -161,39 +206,39 @@
         </nav>
     </header>
 
-    <!-- Homepage Section -->
+    <!-- Hero Section -->
     <section id="home">
         <h2>مرحباً بكم في متجرنا الإلكتروني</h2>
-        <p>نحن متخصصون في بيع المنتجات الفريدة المصنوعة يدوياً والمستوحاة من التراث العماني، بما في ذلك عصي المشي، السكاكين، المجوهرات، الحفريات، وغيرها.</p>
-        <p>نهدف إلى توفير منتجات عالية الجودة مستوحاة من الجمال الطبيعي والتاريخ العريق لسلطنة عمان.</p>
+        <p>اكتشفوا مجموعة من المنتجات الفريدة المصنوعة يدوياً والمستوحاة من التراث العماني.</p>
     </section>
 
     <!-- Products Section -->
     <section id="products">
         <h2>منتجاتنا</h2>
+        <div class="product-grid">
+            <div class="product-card">
+                <img src="https://via.placeholder.com/300x200.png?text=%D8%B9%D8%B5%D9%8A+%D8%A7%D9%84%D9%85%D8%B4%D9%8A" alt="عصي المشي">
+                <p>عصي المشي التقليدية</p>
+                <a href="https://www.instagram.com" target="_blank">المزيد من التفاصيل</a>
+            </div>
 
-        <div class="product">
-            <img src="https://via.placeholder.com/250x200.png?text=%D8%B9%D8%B5%D9%8A+%D8%A7%D9%84%D9%85%D8%B4%D9%8A" alt="عصي المشي">
-            <p>عصي المشي التقليدية</p>
-            <a href="https://www.instagram.com" target="_blank">المزيد من التفاصيل</a>
-        </div>
+            <div class="product-card">
+                <img src="https://via.placeholder.com/300x200.png?text=%D8%A7%D9%84%D8%B3%D9%83%D8%A7%D9%83%D9%8A%D9%86" alt="السكاكين">
+                <p>السكاكين العمانية اليدوية</p>
+                <a href="https://www.instagram.com" target="_blank">المزيد من التفاصيل</a>
+            </div>
 
-        <div class="product">
-            <img src="https://via.placeholder.com/250x200.png?text=%D8%A7%D9%84%D8%B3%D9%83%D8%A7%D9%83%D9%8A%D9%86" alt="السكاكين">
-            <p>السكاكين العمانية اليدوية</p>
-            <a href="https://www.instagram.com" target="_blank">المزيد من التفاصيل</a>
-        </div>
+            <div class="product-card">
+                <img src="https://via.placeholder.com/300x200.png?text=%D8%A7%D9%84%D8%AD%D9%81%D8%B1%D9%8A%D8%A7%D8%AA" alt="الحفريات">
+                <p>الحفريات الطبيعية</p>
+                <a href="https://www.instagram.com" target="_blank">المزيد من التفاصيل</a>
+            </div>
 
-        <div class="product">
-            <img src="https://via.placeholder.com/250x200.png?text=%D8%A7%D9%84%D8%AD%D9%81%D8%B1%D9%8A%D8%A7%D8%AA" alt="الحفريات">
-            <p>الحفريات الطبيعية</p>
-            <a href="https://www.instagram.com" target="_blank">المزيد من التفاصيل</a>
-        </div>
-
-        <div class="product">
-            <img src="https://via.placeholder.com/250x200.png?text=%D8%A7%D9%84%D9%85%D8%AC%D9%88%D9%87%D8%B1%D8%A7%D8%AA" alt="المجوهرات">
-            <p>المجوهرات العمانية الفاخرة</p>
-            <a href="https://www.instagram.com" target="_blank">المزيد من التفاصيل</a>
+            <div class="product-card">
+                <img src="https://via.placeholder.com/300x200.png?text=%D8%A7%D9%84%D9%85%D8%AC%D9%88%D9%87%D8%B1%D8%A7%D8%AA" alt="المجوهرات">
+                <p>المجوهرات العمانية الفاخرة</p>
+                <a href="https://www.instagram.com" target="_blank">المزيد من التفاصيل</a>
+            </div>
         </div>
     </section>
 
@@ -203,13 +248,4 @@
         <p>لأي استفسارات، يمكنك التواصل معنا عبر:</p>
         <p>البريد الإلكتروني: example@email.com</p>
         <p>رقم الهاتف: +968 1234 5678</p>
-        <p>تابعونا على <a href="https://www.instagram.com" target="_blank">إنستجرام</a> لمزيد من التفاصيل.</p>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2024 متجرنا الإلكتروني - سلطنة عمان</p>
-    </footer>
-
-</body>
-</html>
+        <p>تاب
