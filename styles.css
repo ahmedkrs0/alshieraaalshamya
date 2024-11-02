@@ -8,8 +8,8 @@
 body {
   font-family: 'Tajawal', sans-serif;
   color: #333;
-  direction: rtl;
   line-height: 1.6;
+  direction: rtl;
 }
 
 a {
@@ -30,135 +30,94 @@ body.home {
   background: url('background.jpg') no-repeat center center/cover;
   color: #fff;
   font-size: 18px;
+  position: relative;
+  min-height: 100vh;
 }
 
 .overlay {
   background-color: rgba(0, 0, 0, 0.7);
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  right: 0;
+  bottom: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
+  padding: 2rem;
 }
 
-header h1 {
-  font-size: 2.8em;
-  margin-bottom: 0.2em;
+/* Header Styles */
+.header h1 {
+  font-size: 3em;
+  font-weight: bold;
+  margin-bottom: 0.5em;
+  color: #fff;
 }
 
-header p {
+.header p {
   font-size: 1.2em;
+  color: #ddd;
   margin-bottom: 1.5em;
 }
 
-.contact-info {
-  background: rgba(255, 255, 255, 0.85);
-  padding: 1.2em;
+/* Contact Card Styles */
+.contact-card {
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #333;
+  padding: 1.5rem;
   border-radius: 10px;
-  margin-bottom: 1.5em;
-  width: 80%;
-  max-width: 450px;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  margin-bottom: 2em;
 }
 
-.contact-info h2 {
+.contact-card h2 {
   font-size: 1.8em;
-  margin-bottom: 0.8em;
+  margin-bottom: 1em;
+  color: #333;
 }
 
-.contact-info ul li {
-  margin: 0.6em 0;
+.contact-card ul li {
+  margin: 0.8em 0;
   font-size: 1.1em;
 }
 
-.btn {
+/* Button Styles */
+.btn-main {
   display: inline-block;
   background: #28a745;
   color: white;
   padding: 0.8em 1.5em;
-  font-size: 1.2em;
-  border-radius: 5px;
-  margin-top: 1em;
-  transition: background 0.3s ease;
-}
-
-.btn:hover {
-  background: #218838;
-}
-
-/* Products Page Styles */
-body.products {
-  background-color: #f4f4f4;
-}
-
-header {
-  background: #0077cc;
-  color: white;
-  padding: 1.5em 0;
-  text-align: center;
-}
-
-header h1 {
-  font-size: 2.5em;
-}
-
-.product-section {
-  background: white;
-  margin: 2em auto;
-  padding: 2em;
-  border-radius: 10px;
-  max-width: 800px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.product-section h2 {
-  font-size: 2em;
-  color: #333;
-  margin-bottom: 1em;
-  text-align: center;
-}
-
-.product-gallery {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.2em;
-  justify-content: center;
-}
-
-.product-gallery img {
-  width: 100%;
-  max-width: 200px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-  transition: transform 0.3s ease;
-}
-
-.product-gallery img:hover {
-  transform: scale(1.05);
-}
-
-.instagram-link {
-  text-align: center;
-  margin: 2em auto;
   font-size: 1.3em;
-}
-/* Navigation Link Styling */
-.nav-link {
-  display: inline-block;
-  margin-top: 1em;
-  background: #28a745;
-  color: white;
-  padding: 0.5em 1em;
-  border-radius: 5px;
-  font-size: 1em;
-  text-align: center;
+  border-radius: 8px;
   transition: background 0.3s ease;
+  text-decoration: none;
 }
 
-.nav-link:hover {
+.btn-main:hover {
   background: #218838;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .header h1 {
+    font-size: 2.5em;
+  }
+
+  .header p {
+    font-size: 1em;
+  }
+
+  .contact-card {
+    padding: 1.2rem;
+  }
+
+  .btn-main {
+    font-size: 1.1em;
+    padding: 0.7em 1.2em;
+  }
 }
