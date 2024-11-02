@@ -105,19 +105,3 @@ body.products {
   font-size: 1.3em;
   margin-top: 2em;
 }
-body.home {
-  background: url('A_background_image_for_a_modern_Arabic_online_stor.png') no-repeat center center/cover;
-  color: #fff;
-  font-size: 18px;
-  position: relative;
-  min-height: 100vh;
-}
-/* Logo Styles */
-.logo {
-  margin-bottom: 1em;
-}
-
-.logo img {
-  max-width: 150px;
-  height: auto;
-}
