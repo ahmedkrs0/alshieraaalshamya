@@ -1,251 +1,31 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>متجرنا الإلكتروني - سلطنة عمان</title>
-    <style>
-        /* General reset and body styling */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            direction: rtl;
-            background-color: #f4f4f4;
-            color: #333;
-            line-height: 1.6;
-        }
-
-        /* Header and Navigation styling */
-        header {
-            background: linear-gradient(90deg, #4CAF50, #2e7d32);
-            padding: 20px;
-            color: white;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        header img {
-            width: 70px;
-            height: auto;
-        }
-
-        header h1 {
-            font-size: 2.2rem;
-            margin-left: 20px;
-        }
-
-        nav a {
-            color: white;
-            margin-left: 15px;
-            font-weight: bold;
-            text-decoration: none;
-            padding: 10px 15px;
-            border-radius: 5px;
-            transition: background 0.3s ease;
-        }
-
-        nav a:hover {
-            background-color: rgba(255, 255, 255, 0.3);
-        }
-
-        /* Hero section */
-        #home {
-            background-image: url('https://via.placeholder.com/1200x400.png?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7+%D8%A8%D9%83%D9%85+%D9%81%D9%8A+%D9%85%D8%AA%D8%AC%D8%B1%D9%86%D8%A7');
-            background-size: cover;
-            background-position: center;
-            padding: 80px 20px;
-            color: white;
-            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-            text-align: center;
-        }
-
-        #home h2 {
-            font-size: 3rem;
-            margin-bottom: 20px;
-        }
-
-        #home p {
-            font-size: 1.5rem;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        /* Product section styling */
-        #products {
-            padding: 60px 20px;
-            background-color: white;
-        }
-
-        #products h2 {
-            font-size: 2.5rem;
-            color: #333;
-            margin-bottom: 40px;
-        }
-
-        .product-grid {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
-        }
-
-        .product-card {
-            background-color: #f9f9f9;
-            border-radius: 10px;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
-            width: 300px;
-            margin: 20px;
-            transition: transform 0.3s;
-        }
-
-        .product-card:hover {
-            transform: translateY(-10px);
-        }
-
-        .product-card img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-        }
-
-        .product-card p {
-            padding: 20px;
-            font-size: 1.2rem;
-            color: #555;
-        }
-
-        .product-card a {
-            display: inline-block;
-            padding: 10px 20px;
-            background-color: #4CAF50;
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-            margin: 10px 0 20px;
-            border-radius: 5px;
-            transition: background 0.3s ease;
-        }
-
-        .product-card a:hover {
-            background-color: #2e7d32;
-        }
-
-        /* Contact section */
-        #contact {
-            padding: 60px 20px;
-            background: linear-gradient(90deg, #2e7d32, #4CAF50);
-            color: white;
-            text-align: center;
-        }
-
-        #contact h2 {
-            font-size: 2.5rem;
-            margin-bottom: 40px;
-        }
-
-        #contact p {
-            font-size: 1.4rem;
-        }
-
-        #contact a {
-            color: #FFD700;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        /* Footer styling */
-        footer {
-            background-color: #222;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
-
-        footer p {
-            margin: 0;
-            font-size: 1.1rem;
-        }
-
-        /* Responsive styling */
-        @media (max-width: 768px) {
-            header h1 {
-                font-size: 1.8rem;
-            }
-
-            #home h2 {
-                font-size: 2.2rem;
-            }
-
-            #home p {
-                font-size: 1.2rem;
-            }
-
-            #products h2, #contact h2 {
-                font-size: 2rem;
-            }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Al Shieraa Al Shamya - Home</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-
-    <!-- Header and Navigation -->
+<body class="home">
+  <div class="overlay">
     <header>
-        <img src="https://via.placeholder.com/70" alt="Logo">
-        <h1>متجرنا الإلكتروني</h1>
-        <nav>
-            <a href="#home">الصفحة الرئيسية</a>
-            <a href="#products">المنتجات</a>
-            <a href="#contact">تواصل معنا</a>
-        </nav>
+      <h1>Al Shieraa Al Shamya</h1>
+      <p>Your Destination for Quality Walking Sticks & Knives</p>
     </header>
 
-    <!-- Hero Section -->
-    <section id="home">
-        <h2>مرحباً بكم في متجرنا الإلكتروني</h2>
-        <p>اكتشفوا مجموعة من المنتجات الفريدة المصنوعة يدوياً والمستوحاة من التراث العماني.</p>
-    </section>
+    <main>
+      <section class="contact-info">
+        <h2>Contact Us</h2>
+        <ul>
+          <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/company/alshieraaalshamya" target="_blank">Al Shieraa Al Shamya</a></li>
+          <li><strong>Instagram:</strong> <a href="https://www.instagram.com/alshieraaalshamya/" target="_blank">@alshieraaalshamya</a></li>
+          <li><strong>WhatsApp:</strong> <a href="https://wa.me/968" target="_blank">00 968</a></li>
+          <li><strong>Location:</strong> Al Awabi, Al Batinah North Governorate, Oman</li>
+        </ul>
+      </section>
 
-    <!-- Products Section -->
-    <section id="products">
-        <h2>منتجاتنا</h2>
-        <div class="product-grid">
-            <div class="product-card">
-                <img src="https://via.placeholder.com/300x200.png?text=%D8%B9%D8%B5%D9%8A+%D8%A7%D9%84%D9%85%D8%B4%D9%8A" alt="عصي المشي">
-                <p>عصي المشي التقليدية</p>
-                <a href="https://www.instagram.com" target="_blank">المزيد من التفاصيل</a>
-            </div>
-
-            <div class="product-card">
-                <img src="https://via.placeholder.com/300x200.png?text=%D8%A7%D9%84%D8%B3%D9%83%D8%A7%D9%83%D9%8A%D9%86" alt="السكاكين">
-                <p>السكاكين العمانية اليدوية</p>
-                <a href="https://www.instagram.com" target="_blank">المزيد من التفاصيل</a>
-            </div>
-
-            <div class="product-card">
-                <img src="https://via.placeholder.com/300x200.png?text=%D8%A7%D9%84%D8%AD%D9%81%D8%B1%D9%8A%D8%A7%D8%AA" alt="الحفريات">
-                <p>الحفريات الطبيعية</p>
-                <a href="https://www.instagram.com" target="_blank">المزيد من التفاصيل</a>
-            </div>
-
-            <div class="product-card">
-                <img src="https://via.placeholder.com/300x200.png?text=%D8%A7%D9%84%D9%85%D8%AC%D9%88%D9%87%D8%B1%D8%A7%D8%AA" alt="المجوهرات">
-                <p>المجوهرات العمانية الفاخرة</p>
-                <a href="https://www.instagram.com" target="_blank">المزيد من التفاصيل</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact">
-        <h2>تواصل معنا</h2>
-        <p>لأي استفسارات، يمكنك التواصل معنا عبر:</p>
-        <p>البريد الإلكتروني: example@email.com</p>
-        <p>رقم الهاتف: +968 1234 5678</p>
-        <p>تاب
+      <a href="products.html" class="btn">View Our Products</a>
+    </main>
+  </div>
+</body>
+</html>
