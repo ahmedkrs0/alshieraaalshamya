@@ -112,3 +112,12 @@ body.home {
   position: relative;
   min-height: 100vh;
 }
+/* Logo Styles */
+.logo {
+  margin-bottom: 1em;
+}
+
+.logo img {
+  max-width: 150px;
+  height: auto;
+}
